@@ -1,0 +1,7 @@
+export type Photo={id:string;title:string;aircraft:string;airport:string;icao:string;photographer:string;capture:string;award?:string};
+export const photos:Photo[]=[
+{id:"GP-000001",title:"Morning Departure",aircraft:"Airbus A350-900",airport:"Singapore Changi",icao:"WSSS",photographer:"SleepyDriver",capture:"SPOTTED",award:"Photo of the Day"},
+{id:"GP-000002",title:"Heavy into Auckland",aircraft:"Airbus A330-900neo",airport:"Auckland",icao:"NZAA",photographer:"PilotOfTheCars",capture:"SELF-SHOT"},
+{id:"GP-000003",title:"After Dark",aircraft:"Boeing 747-8",airport:"Singapore Changi",icao:"WSSS",photographer:"SleepyDriver",capture:"SPOTTED"},
+{id:"GP-000004",title:"Final Approach",aircraft:"ATR 72-600",airport:"Auckland",icao:"NZAA",photographer:"Blueaviation",capture:"SELF-SHOT"}];
+export const competitions=[{slug:"after-dark",name:"After Dark",status:"OPEN",copy:"Night operations, ramp light and the last movement before dawn."},{slug:"heavy-metal",name:"Heavy Metal",status:"UPCOMING",copy:"Widebodies, freighters and unapologetically large aircraft."},{slug:"unusual-angles",name:"Unusual Angles",status:"UPCOMING",copy:"Show GeoFS from a perspective the archive has not seen before."}];
