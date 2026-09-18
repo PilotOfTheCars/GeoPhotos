@@ -2,15 +2,23 @@
 
 **Capture GeoFS.**
 
-GeoPhotos is a quality-controlled photography platform and permanent photographic archive for the GeoFS community.
+GeoPhotos is an editorial photography archive for GeoFS: submit photographs, pass quality control, receive permanent GP IDs, build a portfolio and compete in curated photography challenges.
 
-> GeoPhotos isn't where screenshots are posted. It's where GeoFS photography is published.
+## Run locally
 
-## Status
-Initial engineering foundation. The product is being built around submissions, QC, permanent GP IDs, structured aviation metadata, portfolios, discovery, awards and competitions.
+```bash
+npm install
+npm run dev
+```
 
-## Local development
-1. Copy `.env.example` to `.env` and configure PostgreSQL and authentication credentials.
-2. Run `npm install`.
-3. Run `npx prisma migrate dev`.
-4. Run `npm run dev`.
+Open http://localhost:3000.
+
+## Current MVP
+
+The repository includes the complete public-facing MVP experience: home, archive/explore, live client search, photographer directory and portfolios, photo detail pages, competitions, about, and a submission workflow UI. The Prisma schema defines the production data model for accounts, permissions, submissions, QC and permanent photo records.
+
+The sample archive is intentionally local fixture data while production services are connected. Authentication, durable image storage, database-backed QC actions and deployment secrets require external service credentials and are not faked in the repository.
+
+## Product rule
+
+GeoPhotos isn't where screenshots are posted. It's where GeoFS photography is published.
