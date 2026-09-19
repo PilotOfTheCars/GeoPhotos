@@ -1,0 +1,1 @@
+import {db} from "@/lib/db";export async function hasPermission(userId:string,key:string){const hit=await db.userRole.findFirst({where:{userId,role:{permissions:{some:{permission:{key}}}}}});return !!hit}export async function requirePermission(userId:string,key:string){if(!(await hasPermission(userId,key)))throw new Error("FORBIDDEN")}
