@@ -1,0 +1,1 @@
+import Link from "next/link";import {auth} from "@/lib/auth";export default async function AuthButton(){let session=null;try{session=await auth()}catch{}return session?.user?<Link href="/account" className="accountLink">{(session.user as any).username||session.user.name||"Account"}</Link>:<Link href="/signin" className="accountLink">Sign in</Link>}
